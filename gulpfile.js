@@ -6,15 +6,16 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
-    notify = require('gulp-notify'),
-    growl = require('gulp-notify-growl');
-
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minify = require('gulp-minify-css');
 
 // Paths
-var paths = {  
-    'dev': {
-        'less': './assets/less/',
-        'js': './assets/js/',
+var paths = {
+    'src': {
+        'sass': './assets/sass/**/*.scss',
+        'js': './assets/js/**/*.js',
+        'img': './assets/img/',
         'vendor': './assets/vendor/'
     },
     'production': {
@@ -23,34 +24,24 @@ var paths = {
     }
 };
 
+// Styles
+gulp.task("styles", function() {
+    return gulp.src(paths.src.sass)
+        .pipe(autoprefixer("> 5%"))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(minify())
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(gulp.dest(paths.dist.css));
 
-// CSS
-gulp.task('css', function() {  
-  return gulp.src(paths.dev.less+'application.less')
-    .pipe(less())
-    .pipe(gulp.dest(paths.production.css))
-    .pipe(minify({keepSpecialComments:0}))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(paths.production.css));
 });
 
-
-// JS
-gulp.task('js', function(){  
-  return gulp.src([
-      // paths.dev.vendor+'jquery/dist/jquery.js',
-      paths.dev.js+'application.js'
-    ])
-    .pipe(concat('application.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.production.js));
+// Scripts
+gulp.task("scripts", function() {
+    return gulp.src(paths.src.js)
+        .pipe(jshint('.jshintrc'))
+        .pipe(jshint.reporter('default'))
+        .pipe(concat('app.js'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.dist.js));
 });
-
-
-// Tasks
-gulp.task('watch', function() {  
-  gulp.watch(paths.dev.less + '/*.less', ['css']);
-  gulp.watch(paths.dev.js + '/*.js', ['js']);
-});
-
-gulp.task('default', ['css', 'js']);  
