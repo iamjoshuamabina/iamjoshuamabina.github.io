@@ -1,3 +1,77 @@
+/*! -----------------------------------------------------
+  app.scss
+
+  This file compiles to /public/assets/css/app.min.css
+  You should use it build your css rainbows.
+
+  Contents
+    Fonts
+    Bootstrap
+    Global
+--------------------------------------------------------- */
+
+/*!--------------------------------------
+ * Fonts
+ * --------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,500,300,700|Lato:400,700');
+
+
+/*!--------------------------------------
+ * Bootstrap
+ * --------------------------------------- */
+
+/* Core variables & mixins */
+@import '../vendor/bootstrap/scss/variables';
+@import '../vendor/bootstrap/scss/mixins';
+
+/* Reset and dependencies */
+@import '../vendor/bootstrap/scss/normalize';
+@import '../vendor/bootstrap/scss/print';
+
+/* Core CSS */
+@import '../vendor/bootstrap/scss/images';
+@import '../vendor/bootstrap/scss/code';
+@import '../vendor/bootstrap/scss/grid';
+@import "../vendor/bootstrap/scss/tables";
+@import '../vendor/bootstrap/scss/forms';
+@import '../vendor/bootstrap/scss/buttons';
+
+/* Components */
+@import '../vendor/bootstrap/scss/animation';
+@import '../vendor/bootstrap/scss/dropdown';
+@import "../vendor/bootstrap/scss/button-group";
+@import "../vendor/bootstrap/scss/input-group";
+@import '../vendor/bootstrap/scss/custom-forms';
+@import '../vendor/bootstrap/scss/nav';
+@import '../vendor/bootstrap/scss/navbar';
+@import '../vendor/bootstrap/scss/card';
+@import "../vendor/bootstrap/scss/breadcrumb";
+@import "../vendor/bootstrap/scss/pagination";
+@import "../vendor/bootstrap/scss/pager";
+@import '../vendor/bootstrap/scss/labels';
+@import '../vendor/bootstrap/scss/jumbotron';
+@import "../vendor/bootstrap/scss/alert";
+@import "../vendor/bootstrap/scss/progress";
+@import '../vendor/bootstrap/scss/media';
+@import '../vendor/bootstrap/scss/list-group';
+@import '../vendor/bootstrap/scss/responsive-embed';
+@import "../vendor/bootstrap/scss/close";
+
+/* Components w/ JavaScripts */
+@import '../vendor/bootstrap/scss/modal';
+@import "../vendor/bootstrap/scss/tooltip";
+@import "../vendor/bootstrap/scss/popover";
+@import '../vendor/bootstrap/scss/carousel';
+
+/* Utility classes */
+@import '../vendor/bootstrap/scss/utilities';
+@import '../vendor/bootstrap/scss/utilities-spacing';
+@import '../vendor/bootstrap/scss/utilities-responsive';
+
+/*!--------------------------------------
+ * Global
+ * --------------------------------------- */
 
 html, body {
   height: 100%;
