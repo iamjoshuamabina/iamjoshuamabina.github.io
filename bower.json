@@ -1,7 +1,7 @@
 {
   "name": "YourProject",
   "dependencies": {
-    // "skeleton": "2.0.*",
-    // "jquery": "1.9.*"
+    "font-awesome": "fontawesome#~4.4.0",
+    "bootstrap": "v4.0.0-alpha"
   }
 }
