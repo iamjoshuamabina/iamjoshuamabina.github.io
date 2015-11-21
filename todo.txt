@@ -1,2 +1,0 @@
-* [type: bug, priority: low] gulp-notify has send notify error
-* [type: doc, priority: low ] add doc: how to install sass compiler
