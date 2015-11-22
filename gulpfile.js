@@ -69,6 +69,21 @@ gulp.task("clean", function() {
     return del([paths.dist.css, paths.dist.js, paths.dist.img, paths.dist.fonts]);
 });
 
+// Watch
+gulp.task("watch", function() {
+    // Watch icon files
+    gulp.watch(paths.src.icons, ['icons']);
+
+    // Watch image files
+    gulp.watch(paths.src.img, ['images']);
+
+    // Watch .scss files
+    gulp.watch(paths.src.sass, ['styles']);
+
+    // Watch .js files
+    gulp.watch(paths.src.js, ['scripts']);
+});
+
 // Default
 gulp.task("default", ["keep"], function() {
     gulp.start('styles', 'scripts', 'icons');
