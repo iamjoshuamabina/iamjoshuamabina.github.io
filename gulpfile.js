@@ -1,8 +1,11 @@
 // Require
-var gulp = require('gulp'),  
+var gulp = require('gulp'),
     less = require('gulp-less'),
     sass = require('gulp-sass'),
     minify = require('gulp-minify-css'),
+    bower = require('gulp-bower'),
+    del = require('del'),
+    jshint = require('gulp-jshint'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
@@ -26,6 +29,11 @@ var paths = {
         'fonts': './public/assets/fonts/'
     }
 };
+
+// Bower
+gulp.task("bower", function() {
+    return bower();
+});
 
 // Styles
 gulp.task("styles", function() {
