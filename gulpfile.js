@@ -56,7 +56,7 @@ gulp.task("icons", function() {
 });
 
 // Keep
-gulp.task("keep", ['clean'], function() {
+gulp.task("keep", ["clean"], function() {
     return gulp.src('.gitkeep')
         .pipe(gulp.dest(paths.dist.fonts))
         .pipe(gulp.dest(paths.dist.img))
@@ -70,6 +70,6 @@ gulp.task("clean", function() {
 });
 
 // Default
-gulp.task("default", ['clean'], function() {
+gulp.task("default", ["keep"], function() {
     gulp.start('styles', 'scripts', 'icons');
 });
