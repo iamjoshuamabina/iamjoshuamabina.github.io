@@ -14,7 +14,7 @@
  * Fonts
  * --------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,500,300,700|Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
 
 
 /*!--------------------------------------
@@ -82,8 +82,7 @@ body {
   padding: 0;
   width: 100%;
   display: table;
-  font-weight: 100;
-  font-family: serif;
+  font-family: 'Raleway', serif;
 }
 
 .container {
