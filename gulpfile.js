@@ -16,11 +16,14 @@ var paths = {
         'sass': './assets/sass/**/*.scss',
         'js': './assets/js/**/*.js',
         'img': './assets/img/',
-        'vendor': './assets/vendor/'
+        'vendor': './assets/vendor',
+        'icons': '/font-awesome/fonts/**.*'
     },
     'production': {
         'css': './public/assets/css/',
-        'js': './public/assets/js/'
+        'js': './public/assets/js/',
+        'img': './public/assets/img/',
+        'fonts': './public/assets/fonts/'
     }
 };
 
@@ -44,4 +47,29 @@ gulp.task("scripts", function() {
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest(paths.dist.js));
+});
+
+// Icons
+gulp.task("icons", function() {
+    return gulp.src(paths.src.vendor + paths.src.icons)
+        .pipe(gulp.dest(paths.dist.fonts));
+});
+
+// Keep
+gulp.task("keep", ['clean'], function() {
+    return gulp.src('.gitkeep')
+        .pipe(gulp.dest(paths.dist.fonts))
+        .pipe(gulp.dest(paths.dist.img))
+        .pipe(gulp.dest(paths.dist.css))
+        .pipe(gulp.dest(paths.dist.js));
+});
+
+// Clean
+gulp.task("clean", function() {
+    return del([paths.dist.css, paths.dist.js, paths.dist.img, paths.dist.fonts]);
+});
+
+// Default
+gulp.task("default", ['clean'], function() {
+    gulp.start('styles', 'scripts', 'icons');
 });
