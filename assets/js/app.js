@@ -1,7 +1,7 @@
 /**
  * app.js
  *
- * This file compiles to /public/assets/css/app.min.js
+ * This file compiles to /public/assets/js/app.min.js
  * You should use it build your js rainbows.
  */
 
