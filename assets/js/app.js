@@ -8,10 +8,14 @@
 function doSomething() {
     "use strict";
 
+<<<<<<< HEAD
     var results = [];
     for(var i = 0; i < 12; i++) {
        results[i] = getRandomNumber(1, 13) * (i + 1);
     }
+=======
+    $('#dateDiv').html(getDate());
+>>>>>>> added gulp lint task
 }
 
 function getRandomNumber(max, min) {

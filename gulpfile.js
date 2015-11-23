@@ -14,13 +14,19 @@ var gulp = require('gulp'),
     minify = require('gulp-minify-css');
 
 // Paths
+var vendorDir = './assets/vendor';
 var paths = {
     'src': {
         'sass': './assets/sass/**/*.scss',
         'js': './assets/js/**/*.js',
         'img': './assets/img/',
-        'vendor': './assets/vendor',
-        'icons': '/font-awesome/fonts/**.*'
+        'vendors': {
+            'icons': vendorDir + '/font-awesome/fonts/**.*',
+            'jquery': vendorDir + '/jquery/dist/jquery.js',
+            'bootstrap': {
+                'js': vendorDir + 'bootstrap/dist/js/bootstrap.js'
+            }
+        }
     },
     'production': {
         'css': './public/assets/css/',
@@ -33,6 +39,12 @@ var paths = {
 // Bower
 gulp.task("bower", function() {
     return bower();
+});
+
+// Icons
+gulp.task("icons", function() {
+    return gulp.src(paths.src.vendors.icons)
+        .pipe(gulp.dest(paths.dist.fonts));
 });
 
 // Styles
@@ -48,19 +60,23 @@ gulp.task("styles", function() {
 
 // Scripts
 gulp.task("scripts", function() {
-    return gulp.src(paths.src.js)
-        .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('default'))
+    return gulp.src([ paths.src.js, paths.src.vendors.jquery, paths.src.vendors.bootstrap.js ])
         .pipe(concat('app.js'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest(paths.dist.js));
 });
 
-// Icons
-gulp.task("icons", function() {
-    return gulp.src(paths.src.vendor + paths.src.icons)
-        .pipe(gulp.dest(paths.dist.fonts));
+// Lints
+gulp.task("lint", function() {
+    return gulp.src(paths.src.js)
+        .pipe(jshint('.jshintrc'))
+        .pipe(jshint.reporter('default'));
+});
+
+// Clean
+gulp.task("clean", function() {
+    return del([paths.dist.css, paths.dist.js, paths.dist.img, paths.dist.fonts]);
 });
 
 // Keep
@@ -70,11 +86,6 @@ gulp.task("keep", ["clean"], function() {
         .pipe(gulp.dest(paths.dist.img))
         .pipe(gulp.dest(paths.dist.css))
         .pipe(gulp.dest(paths.dist.js));
-});
-
-// Clean
-gulp.task("clean", function() {
-    return del([paths.dist.css, paths.dist.js, paths.dist.img, paths.dist.fonts]);
 });
 
 // Watch
