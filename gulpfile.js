@@ -19,7 +19,7 @@ var paths = {
     'src': {
         'sass': './assets/sass/**/*.scss',
         'js': './assets/js/**/*.js',
-        'img': './assets/img/',
+        'img': './assets/img/**/*',
         'vendors': {
             'icons': vendorDir + '/font-awesome/fonts/**.*',
             'jquery': vendorDir + '/jquery/dist/jquery.js',
@@ -45,6 +45,12 @@ gulp.task("bower", function() {
 gulp.task("icons", function() {
     return gulp.src(paths.src.vendors.icons)
         .pipe(gulp.dest(paths.dist.fonts));
+});
+
+// Images
+gulp.task("images", function() {
+    return gulp.src(paths.src.img)
+        .pipe(gulp.dest(paths.dist.img));
 });
 
 // Styles
@@ -105,5 +111,5 @@ gulp.task("watch", function() {
 
 // Default
 gulp.task("default", ["keep"], function() {
-    gulp.start('styles', 'scripts', 'icons');
+    gulp.start('styles', 'scripts', 'icons', 'images');
 });
