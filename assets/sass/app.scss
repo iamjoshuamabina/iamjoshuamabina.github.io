@@ -105,7 +105,10 @@ body {
 }
 
 .h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  i {
+    font-size: 1rem;
+  }
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -178,10 +181,6 @@ body {
 .cover {
   padding: 0 1.5rem;
 }
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: bold;
-}
 
 /*
  * Quotes
@@ -203,10 +202,10 @@ body {
       font-weight: 400;
       line-height: 1.464;
       &:before {
-        content: '\f10d';
+        content: '';
       }
       &:after {
-        content: '\f10e';
+        content: '';
       }
     }
     footer {

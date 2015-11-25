@@ -5,6 +5,7 @@
  * You should use it build your js rainbows.
  */
 
+<<<<<<< HEAD
 function doSomething() {
     "use strict";
 
@@ -24,3 +25,22 @@ function getRandomNumber(max, min) {
     var randomNumber = Math.random();
     return randomNumber * (max - min) + min;
 }
+=======
+$(function() {
+    "use strict";
+
+    function quotes() {
+        $('.carousel').carousel({
+            interval: 5000,
+            wrap: true
+        });
+    }
+
+    function init() {
+        quotes();
+    }
+
+    init();
+
+});
+>>>>>>> added carousel quotes

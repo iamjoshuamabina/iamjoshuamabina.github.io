@@ -1,17 +1,14 @@
 // Require
 var gulp = require('gulp'),
-    less = require('gulp-less'),
-    sass = require('gulp-sass'),
-    minify = require('gulp-minify-css'),
+    autoprefixer = require('gulp-autoprefixer'),
     bower = require('gulp-bower'),
+    concat = require('gulp-concat'),
     del = require('del'),
     jshint = require('gulp-jshint'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
+    minify = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minify = require('gulp-minify-css');
+    uglify = require('gulp-uglify');
 
 // Paths
 var vendorDir = './assets/vendor';
@@ -23,9 +20,7 @@ var paths = {
         'vendors': {
             'icons': vendorDir + '/font-awesome/fonts/**.*',
             'jquery': vendorDir + '/jquery/dist/jquery.js',
-            'bootstrap': {
-                'js': vendorDir + 'bootstrap/dist/js/bootstrap.js'
-            }
+            'bootstrap': vendorDir + 'bootstrap/dist/js/bootstrap.js'
         }
     },
     'production': {
@@ -65,8 +60,8 @@ gulp.task("styles", function() {
 });
 
 // Scripts
-gulp.task("scripts", function() {
-    return gulp.src([ paths.src.js, paths.src.vendors.jquery, paths.src.vendors.bootstrap.js ])
+gulp.task("scripts", ["lint"], function() {
+    return gulp.src([ paths.src.vendors.jquery, paths.src.vendors.bootstrap, paths.src.js ])
         .pipe(concat('app.js'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
@@ -82,7 +77,7 @@ gulp.task("lint", function() {
 
 // Clean
 gulp.task("clean", function() {
-    return del([paths.dist.css, paths.dist.js, paths.dist.img, paths.dist.fonts]);
+    return del([ paths.dist.css, paths.dist.js, paths.dist.img, paths.dist.fonts ]);
 });
 
 // Keep
