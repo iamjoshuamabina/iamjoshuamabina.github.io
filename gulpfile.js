@@ -2,8 +2,10 @@
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     bower = require('gulp-bower'),
+    cache = require('gulp-cache'),
     concat = require('gulp-concat'),
     del = require('del'),
+    imagemin = require('gulp-imagemin'),
     jshint = require('gulp-jshint'),
     minify = require('gulp-minify-css'),
     rename = require('gulp-rename'),
@@ -20,7 +22,7 @@ var paths = {
         'vendors': {
             'icons': vendorDir + '/font-awesome/fonts/**.*',
             'jquery': vendorDir + '/jquery/dist/jquery.js',
-            'bootstrap': vendorDir + 'bootstrap/dist/js/bootstrap.js'
+            'bootstrap': vendorDir + '/bootstrap/dist/js/bootstrap.js'
         }
     },
     'production': {
@@ -45,6 +47,7 @@ gulp.task("icons", function() {
 // Images
 gulp.task("images", function() {
     return gulp.src(paths.src.img)
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
         .pipe(gulp.dest(paths.dist.img));
 });
 
