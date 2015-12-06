@@ -1,0 +1,5 @@
+suggestions for 0.9.1
+=====================
+> jshint-stylish
+> gulp-git
+> gulp-zip
