@@ -1,17 +1,18 @@
 // Require
 var gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    bower = require('gulp-bower'),
-    cache = require('gulp-cache'),
-    concat = require('gulp-concat'),
-    del = require('del'),
-    imagemin = require('gulp-imagemin'),
-    jscs = require('gulp-jscs'),
-    jshint = require('gulp-jshint'),
-    minify = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglify');
+  autoprefixer = require('gulp-autoprefixer'),
+  bower = require('gulp-bower'),
+  cache = require('gulp-cache'),
+  concat = require('gulp-concat'),
+  del = require('del'),
+  imagemin = require('gulp-imagemin'),
+  jscs = require('gulp-jscs'),
+  jshint = require('gulp-jshint'),
+  minify = require('gulp-minify-css'),
+  rename = require('gulp-rename'),
+  sass = require('gulp-sass'),
+  scsslint = require('gulp-scss-lint'),
+  uglify = require('gulp-uglify');
 
 // Paths
 var vendorDir = './assets/vendor';
@@ -72,6 +73,12 @@ gulp.task("scripts", ["lint"], function() {
         .pipe(gulp.dest(paths.dist.js));
 });
 
+// SCSSLint
+gulp.task("scsslint", function() {
+  return gulp.src([ paths.src.sass ])
+    .pipe(scsslint());
+});
+
 // JavaScriptStyleCode
 gulp.task("jscs", function() {
     return gulp.src(paths.src.js)
@@ -86,7 +93,7 @@ gulp.task("jshint", function() {
 });
 
 // Lints
-gulp.task("lint", ["jscs", "jshint"]);
+gulp.task("lint", ["jscs", "jshint", "scsslint"]);
 
 // Clean
 gulp.task("clean", function() {
