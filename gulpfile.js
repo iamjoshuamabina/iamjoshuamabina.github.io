@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     del = require('del'),
     imagemin = require('gulp-imagemin'),
+    jscs = require('gulp-jscs'),
     jshint = require('gulp-jshint'),
     minify = require('gulp-minify-css'),
     rename = require('gulp-rename'),
@@ -71,12 +72,21 @@ gulp.task("scripts", ["lint"], function() {
         .pipe(gulp.dest(paths.dist.js));
 });
 
-// Lints
-gulp.task("lint", function() {
+// JavaScriptStyleCode
+gulp.task("jscs", function() {
+    return gulp.src(paths.src.js)
+        .pipe(jscs());
+});
+
+// JSHint
+gulp.task("jshint", function() {
     return gulp.src(paths.src.js)
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'));
 });
+
+// Lints
+gulp.task("lint", ["jscs", "jshint"]);
 
 // Clean
 gulp.task("clean", function() {
