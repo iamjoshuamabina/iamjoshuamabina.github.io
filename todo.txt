@@ -1,5 +1,6 @@
-suggestions for 0.9.1
-=====================
+new features cart
+=================
 > jshint-stylish
 > gulp-git
 > gulp-zip
+> browserify
