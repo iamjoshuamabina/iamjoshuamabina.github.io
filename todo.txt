@@ -1,6 +1,11 @@
 new features cart
 =================
-> jshint-stylish
-> gulp-git
-> gulp-zip
-> browserify
+> Remove .jshintrc comments
+> Use jshint-stylish to make jshint's logs more informative
+> Use gulp-git to automate (some) git workflow
+> Use gulp-zip to zip production directory. This zip is then uploaded to the shared hosting space.
+> Modularize gulp tasks (refer to: github.com/jasonraimondi/flat-uploader.git).
+	> Create a gulp dir
+	> Separate every task into an individual script.js
+	> Load gulp task script.js as needed in the gulpfile.js
+>
