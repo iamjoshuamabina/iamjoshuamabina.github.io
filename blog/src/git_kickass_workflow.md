@@ -80,5 +80,9 @@
 ## # All That *$H!7* Wrapped Together Nicely...
 
 ![All this *SHIT* put together](https://dl.dropboxusercontent.com/u/62773211/docs/Git%20Branching%20Workflow%20-%20Patrick%20Hogan.png)
+
+## # Upcoming
+
+- Semantic Versioning meets Git KickAss Workflow.
 	
 	
