@@ -29,3 +29,11 @@ I must say, it's pretty hard to know who's sane these days.
 **`TODO`** Logging is an art not because **`...`**
 
 Logging is an art because - **knowing** - *what (activity) and how (level) to log activities* needs some goddamn Picasso skills. Main issue here is, logging affects an application's performance - app's shit the bed when they are run in `DEBUG` mode.
+
+## # Why do we need a logging API?
+
+It is easy to argue that `System.out.println()` is logging for free. So, `java.logging.API`? Martin fowler explains, if you are going to print it to the console, write a test for it - So I can't really say to know what is not working when I am writing code. I think the
+ real value for logging is experienced when I a software is already in production. Sometimes, issues are overlooked 
+ while writing automated tests - those bugs that break free and see the light of day - will, hopefully leave traces. 
+ These traces will be recorded, so now, developers could easily debug systems and make a the world a better place.
+
