@@ -36,3 +36,10 @@ It is easy to argue that `System.out.println()` is logging for free. So, `java.l
  real value for logging is experienced when I a software is already in production. Sometimes, issues are overlooked 
  while writing automated tests - those bugs that break free and see the light of day - will, hopefully leave traces. 
  These traces will be recorded, so now, developers could easily debug systems and make a the world a better place.
+ 
+## # Why do we need different logging levels?
+
+`DEBUG`, `INFO`, `WARN` and `ERROR` - hallmarks of logging levels. Each log level serves a different purpose - 
+*(Arggh!! Obviously)* - based on how critical the information/message you are logging is.
+
+> **`Heads up!`** Never, ever **`...`** ever - use the `DEBUG` level in a **PRODUCTION** artifact.
