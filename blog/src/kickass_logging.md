@@ -20,7 +20,7 @@ Long, long time ago, a group of very smart people, [IETF](https://en.wikipedia.o
 
 > Logging is an art? Art as in Pablo Picasso, Ludwig Van Bethoven, Edward Irving Ludwig etc. are like a bunch of 0s and 1s throwing messages to a file.
 
-I must say, it's pretty hard to know who's sane these days.
+*I must say, it's pretty hard to know who's sane these days.*
 
 > *Vision is the art of seeing what is invisible to others.* 
 
@@ -36,4 +36,3 @@ It is easy to argue that `System.out.println()` is logging for free. So, `java.l
  real value for logging is experienced when I a software is already in production. Sometimes, issues are overlooked 
  while writing automated tests - those bugs that break free and see the light of day - will, hopefully leave traces. 
  These traces will be recorded, so now, developers could easily debug systems and make a the world a better place.
-
