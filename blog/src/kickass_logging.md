@@ -1,6 +1,6 @@
 # # KickAss (Java) Logging
 
-> **`Heads up!`** This is work in progress.
+> **`Heads up!`** Code samples are in **Awesome** - because it is **Java**.
 
 > *Feel free to yell at me - mabinajoshua@gmail.com*
 
@@ -12,5 +12,12 @@ Long, long time ago, a group of very smart people, [IETF](https://en.wikipedia.o
 
 > - **Logging** is an <s>act</s> art of keeping the logfile.
 
-> *Feel free to read the boaring definition on [Wikipedia](https://en.wikipedia.org/wiki/Logfile)*
+> *Feel free to read the more boaring <strong>`...`</strong> at [Logfile - Wikipedia](https://en.wikipedia
+.org/wiki/Logfile)*
 
+
+## # Logging is an art ...?
+
+> *Vision is the art of seeing what is invisible to others.* 
+
+> *[-- Jonathan Swift](https://www.brainyquote.com/search_results.html?q=art)*
