@@ -58,3 +58,10 @@ It is easy to argue that `System.out.println()` is logging for free. So, `java.l
 * **`#1.`** First things, first... This line declares the Logger object. The *Logger* object is used to log *system-specific* messages - in this case, the system is the **`Main.class`**
 
 * **`#2.`** Line 2, logs an INFO level message.
+
+
+### # Upcoming
+
+* What information should you log?
+
+* Choosing the right logging Level.
