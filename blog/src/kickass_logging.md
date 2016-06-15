@@ -64,6 +64,6 @@ It is easy to argue that `System.out.println()` is logging for free. So, `java.l
 
 * What information should you log?
 
-* Choosing the right logging Level.
+* Hmm... Logging levels?!
 
 * Logger vs. System.out.println
