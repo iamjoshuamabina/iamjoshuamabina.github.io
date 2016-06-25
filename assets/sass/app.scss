@@ -1,32 +1,13 @@
-/*! -----------------------------------------------------
-  app.scss
-
-  This file compiles to /public/assets/css/app.min.css
-  You should use it build your css rainbows.
-
-  Contents
-    Fonts
-    Bootstrap
-    Global
-    Base structure
-    Header
-    Cover
-    Quotes
-    Footer
-    Afix and center
-
---------------------------------------------------------- */
-
 /*
- * Fonts
- */
+* Fonts
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 @import '../vendor/font-awesome/scss/font-awesome';
 
 /*
- * Bootstrap
- */
+* Bootstrap
+*/
 
 /* Core variables & mixins */
 @import '../vendor/bootstrap/scss/variables';
@@ -77,8 +58,8 @@
 @import '../vendor/bootstrap/scss/utilities-responsive';
 
 /*
- * Globals
- */
+* Globals
+*/
 
 /* Links */
 a,
@@ -88,27 +69,41 @@ a:hover {
   text-decoration: none;
 }
 
+* {
+  .nav-link {
+	padding: .25rem 0;
+	font-weight: bold;
+	color: rgba(255,255,255,.5);
+	background-color: transparent;
+	border-bottom: .25rem solid transparent;
+  }
+
+  .nav-link:focus,
+  .nav-link:hover {
+	color: #fff;
+  }
+
+  .nav-link + .nav-link {
+	margin-left: 1.7rem;
+  }
+
+}
+
 /*
- * Base structure
- */
+* Base structure
+*/
 
 html,
 body {
   height: 100%;
   background-color: #333;
 }
+
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   font-family: 'Ubuntu Mono', serif;
-}
-
-.h3 {
-  font-size: 1.7rem;
-  i {
-    font-size: 0.9rem;
-  }
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -120,6 +115,7 @@ body {
   -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
   box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
 }
+
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
@@ -135,175 +131,95 @@ body {
 }
 
 /*
- * Header
- */
+* Header
+*/
 
 .masthead {
-  margin-bottom: 2rem;
-}
+  margin-bottom: 1.3rem;
 
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: bold;
-  color: rgba(255,255,255,.5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 .nav-masthead .nav-link + .nav-link {
   margin-left: 1rem;
 }
+=======
+  .active {
+	color: #fff;
+	border-bottom-color: #fff;
+  }
+>>>>>>> major index look updates
 
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
-}
 
 /*
- * Cover
- */
+* Cover
+*/
 
 .cover {
   padding: 0 1.5rem;
+
+  .cover-heading {
+	margin-bottom: 1.7rem;
+  }
+
+  > img {
+	margin-bottom: 0.3rem;
+	width: 100px;
+	height: 100px;
+  }
+
+  .btn-secondary-outline:focus,
+  .btn-secondary-outline:hover {
+	color: #333;
+	background-color: #fff;
+	border-color: #fff;
+  }
+
 }
 
 /*
- * Quotes
- */
-.quotes {
-  .blockquote {
-    margin: 0 auto 2rem;
-    border-left: 0 none;
-    @include media-breakpoint-up(md) {
-      max-width: 60rem;
-      margin-bottom: 4.5rem;
-    }
-    > img {
-      margin-bottom: 1.5625rem;
-      border: 4px solid #fff;
-    }
-    p {
-      margin-bottom: .9375rem;
-      font-weight: 400;
-      line-height: 1.464;
-      &:before {
-        content: '';
-      }
-      &:after {
-        content: '';
-      }
-    }
-    footer {
-      font-size: 1rem;
-      font-weight: 600;
-      line-height: 1.1875;
-      color: #fff;
-      &:before {
-        content: '';
-      }
-      &:after {
-        display: block;
-        width: 2.5rem;
-        height: 1px;
-        margin: .625rem auto 0;
-        content: '';
-        background-color: rgba(255, 255, 255, .25);
-      }
-    }
-  }
-  .carousel-indicators {
-    position: inherit;
-    bottom: auto;
-    left: auto;
-    width: auto;
-    margin: 0 0 2.1875rem;
-    img {
-      width: 45px;
-      height: 45px;
-      margin: 5.5px auto 0;
-      border: 3px solid #fff;
-      transition: all .1s ease-in-out;
-    }
-    li {
-      width: 60px;
-      height: 60px;
-      margin: 0;
-      text-indent: inherit;
-      border: 0;
-      border-radius: 0;
-      opacity: .5;
-      transition: opacity .2s;
-      &:hover {
-        opacity: .9;
-      }
-      &.active {
-        margin: 0;
-        background-color: transparent;
-        opacity: 1;
-        img {
-          width: 56px;
-          height: 56px;
-          margin-top: 0;
-          border: 4px solid #fff;
-        }
-      }
-    }
-  }
-}
-
-/*
- * Footer
- */
+* Footer
+*/
 
 .mastfoot {
   color: rgba(255,255,255,.5);
 }
 
 /*
- * Affix and center
- */
+* Affix and center
+*/
 
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
-    top: 0;
+	position: fixed;
+	top: 0;
   }
+
   .mastfoot {
-    position: fixed;
-    bottom: 0;
+	position: fixed;
+	bottom: 0;
   }
+
   /* Start the vertical centering */
   .site-wrapper-inner {
-    vertical-align: middle;
+	vertical-align: middle;
   }
+
   /* Handle the widths */
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+	width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
 @media (min-width: 62em) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 42rem;
-  }
+	.masthead,
+	.mastfoot,
+	.cover-container {
+	  width: 42rem;
+	}
 }
