@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 var vendorDir = './assets/vendor';
 var paths = {
     'src': {
-        'sass': './assets/sass/**/*.scss',
+        'sass': './assets/sass/app.scss',
         'js': './assets/js/**/*.js',
         'img': './assets/img/**/*',
         'vendors': {

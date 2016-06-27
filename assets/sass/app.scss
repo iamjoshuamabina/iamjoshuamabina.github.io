@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 * Fonts
 */
@@ -152,6 +153,21 @@ body {
 
 }
 
+=======
+/*!
+ * iamjoshuamabina.github.io
+ *
+ * @Author Joshua Mabina <mabinajoshua@gmail.com>
+ * @License WTFPL <wtfpl.net>
+ */
+
+@import "fonts";
+@import "bootstrap";
+@import "globals";
+@import "base";
+@import "header";
+@import "footer";
+>>>>>>> Refactor sass assets
 
 /*
 * Cover
@@ -177,14 +193,6 @@ body {
 	border-color: #fff;
   }
 
-}
-
-/*
-* Footer
-*/
-
-.mastfoot {
-  color: rgba(255,255,255,.5);
 }
 
 /*
