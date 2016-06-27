@@ -3,11 +3,15 @@
 */
 
 /* Links */
-a,
+a {
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+
 a:focus,
 a:hover {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 * {
@@ -22,6 +26,7 @@ a:hover {
   .nav-link:focus,
   .nav-link:hover {
 	color: #fff;
+	text-decoration: none;
   }
 
   .nav-link + .nav-link {
