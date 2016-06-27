@@ -126,5 +126,5 @@ gulp.task("watch", function() {
 
 // Default
 gulp.task("default", ["keep"], function() {
-    gulp.start('styles', 'scripts', 'icons', 'images');
+    gulp.start('styles', 'scripts', 'icons', 'images', 'watch');
 });
