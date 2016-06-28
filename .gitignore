@@ -1,1 +1,8 @@
 .idea/
+
+public/assets/**/*.*
+
+node_modules/
+assets/vendor/
+
+/*.log
