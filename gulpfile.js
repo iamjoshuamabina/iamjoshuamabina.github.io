@@ -27,7 +27,7 @@ var paths = {
             'bootstrap': vendorDir + '/bootstrap/dist/js/bootstrap.js'
         }
     },
-    'production': {
+    'dist': {
         'css': './public/assets/css/',
         'js': './public/assets/js/',
         'img': './public/assets/img/',
