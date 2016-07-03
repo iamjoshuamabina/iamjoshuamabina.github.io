@@ -12,6 +12,25 @@ Git is a 2-weeks project in 2005 by Linus Torvalds, the original author of the L
 
 - **Distributed** - One of the nicest things about git, is, it is distributed (a.k.a **decentralized**). Traditional version control systems are **centralized** (*translation* don&apos;t go down this road; **pain-in-the-ass** ahead). Being distributed, Git allows many developers to collaborate with great ease. 
 
+### # Why Git?
+
+Really short answer: It is a **Batman** thing to do.
+
+The longer answer, you should use Git because:
+	
+- Better history: Because Git is distributed, developers make commits more often to their local branch without fear of your changes breaking the public codebase. More commits mean a better history.
+
+- Offline: When ready to push your changes to a remote repository, connect to network and push. For developers, such flexibility means more productivity.
+
+- Branching: Git's killer feature. Elsewhere, branching is a nightmare[2].
+
+- Speedster: Git is fucking fast. A picture is worth a thousand words - [benchmarks are worth more](https://git-scm.com/about/small-and-fast). 
+
+> **Not satisfied? Feel free to read more:**
+
+> [Why Use Git Instead of a Legacy Version Control System?](http://www.gitguys.com/topics/why-use-git-instead-of-a-legacy-version-control-system/)
+
+
 **`ProTip`** Commit **Units**. Commit **Early**. Commit **Often**.
 
 > **`Heads up!`** Patrick Hogan did **[a great talk about Git and Workflows](https://youtu.be/GYnOwPl8yCE)** - I just had to *gist* this.
