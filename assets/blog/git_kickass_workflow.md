@@ -65,6 +65,31 @@ The longer answer, you should use Git because:
 	
 ### # Getting and Creating Projects
 
+`git-init` - Create an empty Git repository or re-initialize an exisiting one.
+
+**Use-cases:**
+
+- Create an empty Git repository - basically a `.git/` directory with appropriate subdirectories. A reference to the HEAD of the tip master branch is also created.
+
+	```bash
+	$ git init
+	Initialized empty Git repository in /path/to/project/directory/.git/
+	```
+	
+- Optimize your git workflow by automating the creation of .gitignore, README, LICENSE and other goodies.
+
+	```bash
+	$ git init --template=<template_directory>
+	Initialized empty Git repository in /path/to/project/directory/.git/
+	```
+		
+	The template directory contains files and directories that will be copied to the `.git/` directory after its created. 
+	The default template directory is `/usr/share/git-core/templates/`.
+		
+- Run `git-init` again to re-initializes the project - *reload the `.git` directory.*
+> Running git init in an existing repository is safe. It will not overwrite things that are already there. The primary reason for rerunning git init is to pick up newly added templates (or to move the repository to another place if --separate-git-dir is given).
+
+
 ### # Branching and Merging
 
 ### # Shairing and Updating Projects
