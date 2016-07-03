@@ -31,7 +31,38 @@ The longer answer, you should use Git because:
 > [Why Use Git Instead of a Legacy Version Control System?](http://www.gitguys.com/topics/why-use-git-instead-of-a-legacy-version-control-system/)
 
 ### # Setup and Config
+	
+`git-config` - Get and set repository or global options.
 
+**Use cases:**
+
+- Set your global user settings.
+	
+	```bash
+	$ git config --global user.name "Bruce Wayne"
+	
+	$ git config --global user.email "bwayne@wayne-ent.com"
+	
+	$ git config --global core.editor emacs
+	```
+- Get your global user settings
+	
+	```bash
+	$ git config --global user.name
+	Bruce Wayne
+	
+	$ git config --global user.email
+	bwayne@wayne-ent.com
+	```
+
+- Sometimes, say when *Bruce Wayne* is busy being *Batman*, the ability to override the global settings comes in handy.
+	
+	```bash
+	$ git config --local user.name "Batman"
+	
+	$ git config --local user.email "batman@justiceleague.com"
+	```
+	
 ### # Getting and Creating Projects
 
 ### # Branching and Merging
