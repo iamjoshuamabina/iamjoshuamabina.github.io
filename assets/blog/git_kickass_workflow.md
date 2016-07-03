@@ -1,7 +1,18 @@
-# # Git KickAss Workflow
-> ### `Basics and Best Practices`
+# Git: A Kick-ass Workflow
 
-> **`ProTip`** Commit **Units**. Commit **Early**. Commit **Often**.
+## # The Basics
+
+### # WTF is Git?
+
+Git is a 2-weeks project in 2005 by Linus Torvalds, the original author of the Linux kernel.
+
+- **Free and open source** - Git is released under the GNU General Public License version 2.0.
+
+- **Version control system (VCS)** - Git records changes to a file or set of files over time so that you can recall specific versions later.
+
+- **Distributed** - One of the nicest things about git, is, it is distributed (a.k.a **decentralized**). Traditional version control systems are **centralized** (*translation* don&apos;t go down this road; **pain-in-the-ass** ahead). Being distributed, Git allows many developers to collaborate with great ease. 
+
+**`ProTip`** Commit **Units**. Commit **Early**. Commit **Often**.
 
 > **`Heads up!`** Patrick Hogan did **[a great talk about Git and Workflows](https://youtu.be/GYnOwPl8yCE)** - I just had to *gist* this.
 
@@ -11,7 +22,7 @@
 
 ## # Non Workflow
 
-- **Make** Changes
+- **Make** Changes 
 - **More** Changes
 - **Break** Codebase
 - **RAGE!!**
