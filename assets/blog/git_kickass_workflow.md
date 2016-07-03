@@ -30,14 +30,13 @@ The longer answer, you should use Git because:
 
 > [Why Use Git Instead of a Legacy Version Control System?](http://www.gitguys.com/topics/why-use-git-instead-of-a-legacy-version-control-system/)
 
+### # Setup and Config
 
-**`ProTip`** Commit **Units**. Commit **Early**. Commit **Often**.
+### # Getting and Creating Projects
 
-> **`Heads up!`** Patrick Hogan did **[a great talk about Git and Workflows](https://youtu.be/GYnOwPl8yCE)** - I just had to *gist* this.
+### # Branching and Merging
 
-> **`Heads up!`** This is work in progress.
-
-> *Feel free to yell at me - mabinajoshua@gmail.com*
+### # Shairing and Updating Projects
 
 ## # Non Workflow
 
@@ -113,3 +112,7 @@ The longer answer, you should use Git because:
 ![All this *SHIT* put together](https://dl.dropboxusercontent.com/u/62773211/docs/Git%20Branching%20Workflow%20-%20Patrick%20Hogan.png)
 	
 	
+**`ProTip`** Commit **Units**. Commit **Early**. Commit **Often**.
+
+
+> **`Heads up!`** Patrick Hogan did **[a great talk about Git and Workflows](https://youtu.be/GYnOwPl8yCE)** - I just had to *gist* this.
