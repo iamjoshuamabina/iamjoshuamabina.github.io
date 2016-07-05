@@ -32,9 +32,11 @@ The longer answer, you should use Git because:
 
 ### # Setup and Config
 	
-`git-config` - Get and set repository or global options.
+`git-config` 
 
-**Use-cases:**
+> Get and set repository or global options.
+
+**Usage:**
 
 - Set your global user settings.
 	
@@ -71,7 +73,7 @@ The longer answer, you should use Git because:
 	
 > Clone a repository into a new directory.
 
-**Use-cases:**
+**Usage:**
 
 - Get a project from a remote repository
 
@@ -84,7 +86,7 @@ The longer answer, you should use Git because:
 `git-init` 
 > Create an empty Git repository or re-initialize an exisiting one.
 
-**Use-cases:**
+**Usage:**
 
 - Create an empty Git repository - basically a `.git/` directory with appropriate subdirectories.
 
