@@ -22,7 +22,7 @@ The longer answer, you should use Git because:
 
 - Offline: When ready to push your changes to a remote repository, connect to network and push. For developers, such flexibility means more productivity.
 
-- Branching: Git's killer feature. Elsewhere, branching is a nightmare[2].
+- Branching: Git's killer feature. Elsewhere, branching is a nightmare.
 
 - Speedster: Git is fucking fast. A picture is worth a thousand words - [benchmarks are worth more](https://git-scm.com/about/small-and-fast). 
 
@@ -34,7 +34,7 @@ The longer answer, you should use Git because:
 	
 `git-config` - Get and set repository or global options.
 
-**Use cases:**
+**Use-cases:**
 
 - Set your global user settings.
 	
@@ -65,11 +65,28 @@ The longer answer, you should use Git because:
 	
 ### # Getting and Creating Projects
 
-`git-init` - Create an empty Git repository or re-initialize an exisiting one.
+#### Cloning from a remote repository
+
+`git-clone` 
+	
+> Clone a repository into a new directory.
 
 **Use-cases:**
 
-- Create an empty Git repository - basically a `.git/` directory with appropriate subdirectories. A reference to the HEAD of the tip master branch is also created.
+- Get a project from a remote repository
+
+	```bash
+	$ git clone <repository_url>
+	```
+
+#### Initializing a repository
+
+`git-init` 
+> Create an empty Git repository or re-initialize an exisiting one.
+
+**Use-cases:**
+
+- Create an empty Git repository - basically a `.git/` directory with appropriate subdirectories.
 
 	```bash
 	$ git init
@@ -82,13 +99,12 @@ The longer answer, you should use Git because:
 	$ git init --template=<template_directory>
 	Initialized empty Git repository in /path/to/project/directory/.git/
 	```
-		
+	
 	The template directory contains files and directories that will be copied to the `.git/` directory after its created. 
 	The default template directory is `/usr/share/git-core/templates/`.
 		
-- Run `git-init` again to re-initializes the project - *reload the `.git` directory.*
+- Run `git-init` again to re-initializes the project. It'll be like *reloading the `.git` directory.*
 > Running git init in an existing repository is safe. It will not overwrite things that are already there. The primary reason for rerunning git init is to pick up newly added templates (or to move the repository to another place if --separate-git-dir is given).
-
 
 ### # Branching and Merging
 
