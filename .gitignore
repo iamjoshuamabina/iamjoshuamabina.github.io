@@ -5,4 +5,4 @@ assets/vendor/
 
 public/assets/**/*.*
 
-/*.log
+*.log
