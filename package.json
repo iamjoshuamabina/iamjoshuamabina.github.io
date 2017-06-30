@@ -1,38 +1,21 @@
 {
-	"name": "iamjoshuamabina.github.io",
-	"version": "0.1.0",
-	"description": "Joshua Mabina",
-	"main": "index.md",
-	"scripts": {
-		"build": "gulp"
-	},
+	"name": "joshuamabina.github.io",
+	"version": "2.0.0-alpha",
+	"description": "My personal site built on twbs and gatsby",
+	"main": "n/a",
+	"scripts": {},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/iamjoshuamabina/iamjoshuamabina.github.io"
+		"url": "git://github.com/joshuamabina/joshuamabina.github.io"
 	},
-	"author": "Joshua Mabina",
-	"license": "WTFPLv2",
+	"author": "Joshua Mabina <joshuamabina@gmail.com>",
+	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/iamjoshuamabina/iamjoshuamabina.github.io/issues"
+		"url": "https://github.com/joshuamabina/joshuamabina.github.io/issues"
 	},
-	"homepage": "https://iamjoshuamabina.github.io",
+	"homepage": "https://joshuamabina.github.io",
 	"dependencies": {
-		"mustache": "^2.2.1"
 	},
 	"devDependencies": {
-		"gulp": "^3.8.8",
-		"gulp-autoprefixer": "^3.1.0",
-		"gulp-bower": "0.0.10",
-		"gulp-cache": "^0.4.0",
-		"gulp-concat": "^2.6.0",
-		"gulp-imagemin": "^2.4.0",
-		"gulp-jscs": "^3.0.2",
-		"gulp-jshint": "^1.12.0",
-		"gulp-minify-css": "^0.3.13",
-		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^2.1.0",
-		"gulp-scss-lint": "^0.3.8",
-		"gulp-sourcemaps": "^1.6.0",
-		"gulp-uglify": "^1.4.2"
 	}
 }

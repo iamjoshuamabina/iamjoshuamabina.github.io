@@ -1,11 +1,5 @@
-<pre>
+> **Heads up! This is work in progress**
 
-Hello World!
-I am Joshua Mabina. This my personal website.
+My personal website built on [twbs](https://github.com/twbs/bootstrap) and [gatsby](https://github.com/gatsbyjs/gatsby).
 
-Email: mabinajoshua@gmail.com
-Twitter: @iamjoshuamabina
-GitHub: @iamjoshuamabina
-StackOverflow: @iamjoshuamabina
-
-</pre>
+Feel free to yell at me: mabinajoshua@gmail.com
