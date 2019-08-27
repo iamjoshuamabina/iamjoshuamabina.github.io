@@ -1,7 +1,3 @@
-My site
+This repository contains the entire code-base for my personal site http://joshuamabina.xyz.
 
-This contains the code for my personal site http://joshuamabina.xyz.
-
-License
-
-http://www.wtfpl.net
+See license http://www.wtfpl.net
