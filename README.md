@@ -1,5 +1,7 @@
-> **Heads up! This is work in progress**
+My site
 
-My personal website built on [twbs](https://github.com/twbs/bootstrap) and [gatsby](https://github.com/gatsbyjs/gatsby).
+This contains the code for my personal site http://joshuamabina.xyz.
 
-Feel free to yell at me: mabinajoshua@gmail.com
+License
+
+http://www.wtfpl.net
